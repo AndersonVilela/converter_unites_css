@@ -33,10 +33,9 @@
   min-height: 100vh;
 
   background: #fdfdfd;
-  display: flex;
-  flex-direction: column;
 
   header {
+    height: 5vh;
     display: flex;
     padding: 0.5rem 0 0 0.5rem;
     letter-spacing: 0.06em;
@@ -59,6 +58,11 @@
     }
   }
   main {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     h2 {
       font-style: normal;
       font-weight: 300;
@@ -71,12 +75,14 @@
       margin: 2rem 0 1.5rem 0;
     }
     .nav {
+      width: 22rem;
       display: flex;
       justify-content: center;
       ul {
-        width: 18%;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
         text-align: start;
         li {
@@ -85,7 +91,7 @@
             font-style: normal;
             font-weight: 300;
             font-size: 1.6rem;
-            line-height: 47px;
+            line-height: 2.2rem;
             text-decoration: none;
             color: #000000;
           }
@@ -94,10 +100,8 @@
     }
   }
   footer {
-    background: #f4f4f4;
-    margin-top: 38.58rem;
-    border-top: 0.4px solid #c0c0c0;
-    height: 2rem;
+    background: #584747;
+    height: 5vh;
     padding: 0.5rem 0 0 1rem;
     display: flex;
     align-items: center;
@@ -107,6 +111,52 @@
     a {
       text-decoration: none;
       color: #a88d8d;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .Container {
+    main {
+      h2 {
+        font-size: 2rem;
+      }
+      .nav {
+        width: 18rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .Container {
+    main {
+      height: 90vh;
+      h2 {
+        font-size: 1.4rem;
+      }
+      .nav {
+        width: 11.5rem;
+        ul {
+          li {
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      strong {
+        font-size: 0.7rem;
+      }
+      a {
+        font-size: 0.7rem;
+      }
     }
   }
 }
