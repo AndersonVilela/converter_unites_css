@@ -1,9 +1,6 @@
 <template>
   <div class="Container">
-    <header>
-      <span>Alb</span>
-      <strong>Calc</strong>
-    </header>
+    <TheHeader />
     <main>
       <h2>Minimalist Online Calculators</h2>
       <nav class="nav">
@@ -20,12 +17,22 @@
         </ul>
       </nav>
     </main>
-    <footer>
-      <strong>version: 0.0.0</strong>
-      <a href="#">Developed from AndersonVilela</a>
-    </footer>
+    <TheFooter />
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import TheHeader from "./TheHeader.vue";
+import TheFooter from "./TheFooter.vue";
+
+export default defineComponent({
+  components: {
+    TheHeader,
+    TheFooter,
+  },
+});
+</script>
 
 <style lang="scss" scoped>
 .Container {
@@ -33,35 +40,11 @@
   min-height: 100vh;
 
   background: #fdfdfd;
-
-  header {
-    height: 5vh;
-    display: flex;
-    padding: 0.5rem 0 0 0.5rem;
-    letter-spacing: 0.06em;
-
-    span {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 20px;
-      line-height: 30px;
-
-      color: #000000;
-    }
-    strong {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 30px;
-
-      color: #000000;
-    }
-  }
   main {
     height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     h2 {
       font-style: normal;
@@ -99,20 +82,6 @@
       }
     }
   }
-  footer {
-    background: #584747;
-    height: 5vh;
-    padding: 0.5rem 0 0 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    color: #a88d8d;
-    a {
-      text-decoration: none;
-      color: #a88d8d;
-    }
-  }
 }
 
 @media (max-width: 540px) {
@@ -144,18 +113,6 @@
             }
           }
         }
-      }
-    }
-    footer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      strong {
-        font-size: 0.7rem;
-      }
-      a {
-        font-size: 0.7rem;
       }
     }
   }
