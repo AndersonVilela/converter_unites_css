@@ -7,7 +7,7 @@
         <div class="box">
           <span>Pixels</span>
           <div>
-            <input type="text" />
+            <input type="text" v-model="px" />
             <span>px</span>
           </div>
         </div>
@@ -15,7 +15,7 @@
         <div class="box box-result">
           <span>REM</span>
           <div>
-            <span></span>
+            <span>{{ px && converttorem() }}</span>
             <span>rem</span>
           </div>
         </div>
@@ -62,8 +62,13 @@ import Vue from "vue";
   },
 })
 export default class PxToRem extends Vue {
-  public px = 0;
-  public rem = 0;
+  px = 0;
+
+  converttorem() {
+    if (this.px != 0) {
+      return Number(this.px) / 16;
+    }
+  }
 }
 </script>
 
