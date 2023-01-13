@@ -9,7 +9,7 @@
             <router-link to="/pxtorem">PX to REM converter</router-link>
           </li>
           <li>
-            <router-link to="/pxtorem">PX to EM converter</router-link>
+            <router-link to="/remtopx">REM to PX converter</router-link>
           </li>
           <li>
             <router-link to="/pxtorem">PX to percentage converter</router-link>

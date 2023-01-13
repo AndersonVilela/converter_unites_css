@@ -14,6 +14,11 @@ const routes: Array<RouteConfig> = [
     name: "pxtorem",
     component: () => import("../views/PxToRem.vue"),
   },
+  {
+    path: "/remtopx",
+    name: "remtopx",
+    component: () => import("../views/RemToPx.vue"),
+  },
 ];
 
 const router = new VueRouter({
