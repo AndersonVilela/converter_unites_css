@@ -12,7 +12,14 @@
             <router-link to="/remtopx">REM to PX converter</router-link>
           </li>
           <li>
-            <router-link to="/pxtorem">PX to percentage converter</router-link>
+            <router-link to="/pxtopercentage"
+              >PX to percentage converter</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/percentagetopx"
+              >Percentage to PX converter</router-link
+            >
           </li>
         </ul>
       </nav>

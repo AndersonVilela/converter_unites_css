@@ -19,6 +19,16 @@ const routes: Array<RouteConfig> = [
     name: "remtopx",
     component: () => import("../views/RemToPx.vue"),
   },
+  {
+    path: "/pxtopercentage",
+    name: "pxtopercentage",
+    component: () => import("../views/PxToPercentage.vue"),
+  },
+  {
+    path: "/percentagetopx",
+    name: "percentagetopx",
+    component: () => import("../views/PercentageToPx .vue"),
+  },
 ];
 
 const router = new VueRouter({

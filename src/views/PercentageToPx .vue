@@ -2,49 +2,36 @@
   <div class="Containerpxtorem">
     <TheHeader />
     <main>
-      <h3>Rem to PX converter</h3>
+      <h3>Percentage to PX converter</h3>
       <section class="converter">
         <div class="box">
-          <span>Rem</span>
+          <span>%</span>
           <div>
-            <input type="text" v-model="rem" />
-            <span>rem</span>
+            <input type="text" v-model="percentage" />
+            <span>%</span>
           </div>
         </div>
-        <a href="/pxtorem">
+        <a href="/pxtopercentage">
           <img src="../assets/swap.svg" alt="" />
         </a>
         <div class="box box-result">
-          <span>PX</span>
+          <span>px</span>
           <div>
-            <span>{{ rem && converttorem() }}</span>
+            <span>{{ percentage && converttopx() }}</span>
             <span>px</span>
           </div>
         </div>
       </section>
       <section class="description">
-        <h3 class="title">Convert px to rem</h3>
+        <h3 class="title">Convert percentage to px</h3>
         <p>
           This is a minimalist online calculator that converts pixels to CSS REM
           units. Conversion is based on the default font size of 16 pixels.
         </p>
         <p>
-          With the rem CSS unit, you can set a size relative to the font size of
-          the HTML root tag.
-        </p>
-        <p>
-          Conversion works naturally in both directions, just change the
+          The conversion works of course in both directions, just change the
           opposite input field.
         </p>
-        <h4 class="subtitle">EM vs. REM:</h4>
-        <p>
-          the differences Within a single document, the length of a REM unit is
-          the same everywhere and may only differ between documents. The EM, on
-          the other hand, can differ between each element, because it is
-          relative to the font size of the element itself (except the font size
-          itself, where the EM is relative to the parent).
-        </p>
-        <p>REM is the newest unit, older browsers don't support it.</p>
       </section>
     </main>
     <TheFooter class="footer" />
@@ -63,12 +50,12 @@ import Vue from "vue";
     TheFooter,
   },
 })
-export default class RemToPx extends Vue {
-  rem = 0;
+export default class PercentageToPX extends Vue {
+  percentage = 0;
 
-  converttorem() {
-    if (this.rem != 0) {
-      return Number(this.rem) * 16;
+  converttopx() {
+    if (this.percentage != 0) {
+      return Number(this.percentage) / 6.25;
     }
   }
 }
