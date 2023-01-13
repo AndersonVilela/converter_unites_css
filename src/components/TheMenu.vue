@@ -22,16 +22,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import Component from "vue-class-component";
+import Vue from "vue";
 import TheHeader from "./TheHeader.vue";
 import TheFooter from "./TheFooter.vue";
 
-export default defineComponent({
+@Component({
   components: {
-    TheHeader,
     TheFooter,
+    TheHeader,
   },
-});
+})
+export default class TheMenu extends Vue {}
 </script>
 
 <style lang="scss" scoped>
