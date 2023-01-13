@@ -11,7 +11,10 @@
             <span>px</span>
           </div>
         </div>
-        <img src="../assets/swap.svg" alt="" />
+        <a href="/remtopx">
+          <img src="../assets/swap.svg" alt="" />
+        </a>
+
         <div class="box box-result">
           <span>REM</span>
           <div>
@@ -137,10 +140,12 @@ main {
         }
       }
     }
-    > img {
-      height: 2rem;
-      opacity: 0.5;
-      margin-top: 1.5rem;
+    a {
+      img {
+        height: 2rem;
+        opacity: 0.5;
+        margin-top: 1.5rem;
+      }
     }
   }
   .description {
